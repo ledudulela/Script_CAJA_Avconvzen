@@ -1,0 +1,26 @@
+#!/bin/bash
+# auteur : ledudulela
+# version: 1.1
+# màj : 2015-06-10 20:40 
+# util: convertit les vidéos sélectionnées
+# dépendances: zenity, avconv, avconvzen
+# Ouvrez en tant qu'administrateur le répertoire /usr/local/bin
+# Collez y le fichier 'avconvzen' et rendez le exécutable
+# Le script peut ainsi être appelé facilement en ligne de commande.
+# exemple$: 
+# avconvzen chemin_fichier
+# avconvzen -o3 chemin_fichier (avec argument -o pour sélectionner par défaut la troisième option de la liste.)
+OLD_IFS="$IFS"
+IFS='
+'
+arrFilePaths=( $CAJA_SCRIPT_SELECTED_FILE_PATHS )
+IFS="$OLD_IFS"
+for selectedFile in "${arrFilePaths[@]}"
+do
+	bash /usr/local/bin/avconvzen -o2 "$selectedFile"
+done
+if [ $? == 0 ]
+then
+	zenity --info --title="Conversion" --text="Conversion terminée" --timeout=10
+fi
+exit
