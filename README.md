@@ -1,3 +1,4 @@
+```
 # auteur : ledudulela
 # version: 1.2
 # màj : 2015-06-26 18:00 
@@ -9,3 +10,6 @@
 # exemple$: 
 # avconvzen chemin_fichier
 # avconvzen -o3 chemin_fichier (avec argument -o pour sélectionner par défaut la troisième option de la liste.)
+```
+le script avconvzen est téléchargeable sur github: 
+https://github.com/ledudulela/Script_SYS_Avconvzen
