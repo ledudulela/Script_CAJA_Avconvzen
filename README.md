@@ -1,6 +1,30 @@
-Objet: Lanceur du script avconvzen depuis le gestionnaire de fichier (Caja)
+# AVCONVZEN & CAJA
+Objet: Lanceur du script avconvzen depuis le gestionnaire de fichiers Caja
 
-Prérequis: zenity; avconv; avconvzen
+Dépendances: zenity; avconv; avconvzen
+
+![screenshot](https://github.com/ledudulela/Script_CAJA_Avconvzen/blob/master/avconvzenfm_caja.jpg)
+
+--
+
+Le script avconvzenfm_caja.sh est à placer de préférence dans le répertoire /usr/local/bin/
+
+Il peut être appelé depuis le gestionnaire de fichiers.
+
+Par exemple pour Caja, en créant un lien symbolique vers /usr/local/bin/avconvzenfm_caja.sh
+
+dans le répertoire /home/utilisateur/.config/caja/scripts
+
+et en nommant ce lien symbolique "Convertit la vidéo en...", il apparaitra en faisant un
+ clic-droit sur une vidéo dans Caja, un sous-menu Scripts > Convertit la vidéo en...
+
+*ln -s "/usr/local/bin/avconvzenfm_caja.sh" "$HOME/.config/caja/scripts/Convertit la vidéo en..."*
+
+--
+
+idem avec le script avconvzenfm_x11 pour convertir directement des fichiers ts en mp4 
+
+*ln -s "/usr/local/bin/avconvzenfm_x11.sh" "$HOME/.config/caja/scripts/Convertit la vidéo TS en MP4"*
 
 --
 
@@ -18,29 +42,6 @@ avconvzen -o3 chemin_fichier (avec argument -o pour sélectionner par défaut la
 
 le script avconvzen est téléchargeable sur github: 
 https://github.com/ledudulela/Script_SYS_Avconvzen
-
---
-
-Le script avconvzenfm_caja.sh est à placer de préférence dans le répertoire /usr/local/bin/
-
-Il peut être appelé depuis le gestionnaire de fichiers.
-
-Par exemple pour Caja, en créant un lien symbolique vers /usr/local/bin/avconvzenfm_caja.sh
-
-dans le répertoire /home/utilisateur/.config/caja/scripts
-
-et en nommant ce lien symbolique "Convertit la vidéo en...", il apparaitra en faisant un
- clic-droit sur une vidéo dans Caja, un sous-menu Scripts > Convertit la vidéo en...
-
-ln -s "/usr/local/bin/avconvzenfm_caja.sh" "/home/utilisateur/.config/caja/scripts/Convertit la vidéo en..."
-
---
-
-idem avec le script avconvzenfm_x11 pour convertir directement des fichiers ts en mp4 
-
-ln -s "/usr/local/bin/avconvzenfm_x11.sh" "/home/utilisateur/.config/caja/scripts/Convertit la vidéo TS en MP4"
-
-
 
 
 
